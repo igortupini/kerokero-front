@@ -5,10 +5,9 @@ const KweetList = props => {
 return (
     <div className={styles.container}>
         <div className={styles.list}>
-        <small>{props.kweets.length&&props.kweets[0].content}</small>
             {props.kweets.map(kweet => {
                 return (
-                    <div className={styles.kweetItem}>
+                    <div className={styles.kweetItem} key={kweet.id}>
                         <div><b>First Name</b> - 4 min</div>
                         <p>{kweet.content}</p>
                         <div className={styles.kweetInfo}>

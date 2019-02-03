@@ -33,7 +33,6 @@ class App extends Component {
 
 	render() {
 		let { kweets } = this.state
-		console.log(kweets)
 		return (
 			<div>
 				<Menu />
