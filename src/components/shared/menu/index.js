@@ -1,13 +1,13 @@
 import React from "react";
-import styles from './Menu.module.css'
+import styles from './index.module.css'
 
 const Menu = props => {
 return (
 <div className={styles.nav}>
 <div className={styles.navItems}>
     <ul>
-        <li>Home</li>
-        <li>Logout</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Logout</a></li>
     </ul>
 </div>
 </div>
