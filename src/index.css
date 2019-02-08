@@ -8,6 +8,8 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #9D8189;
+  color: #FFF;
 }
 
 code {

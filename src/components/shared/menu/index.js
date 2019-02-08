@@ -6,8 +6,8 @@ return (
 <div className={styles.nav}>
 <div className={styles.navItems}>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Logout</a></li>
+        <li>Home</li>
+        <li>Logout</li>
     </ul>
 </div>
 </div>

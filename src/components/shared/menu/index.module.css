@@ -1,5 +1,6 @@
 .nav{
-    border-bottom: 2px solid grey;
+    background-color: #F4ACB7;
+    border-bottom: 1px solid rgba(0,0,0,.35);
     display: flex;
     justify-content: center;
     height: 3rem;
@@ -21,4 +22,8 @@
 .nav ul li{
     display: block;
     margin-right:1rem;    
+}
+
+a{
+    color: #FFF;
 }

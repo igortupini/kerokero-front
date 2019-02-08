@@ -5,13 +5,14 @@
 
 .list{
     width: 800px;
-    margin-top: 1rem;
+    margin: 0.5rem 0;
 }
 
 .kweetItem{
     border: 1px solid lightgray;
     border-radius: .3rem;
     margin-bottom: 1rem;
+    padding: .5rem;
 }
 
 .kweetItem h1{
