@@ -12,6 +12,7 @@ class Profile extends Component {
         this.state = {
             kweets: []
         }
+        this.postKweet = this.postKweet.bind(this)
     }
 
     fetchKweets(){
@@ -22,6 +23,14 @@ class Profile extends Component {
 		})
 		.catch(e => console.error(e))
     }
+
+    postKweet(kweet){
+        return axios.post(API_URL+'/kweet',kweet)
+        .then(res => {
+            this.fetchKweets()
+        })
+        .catch(e => console.error(e))
+    }
     
     componentDidMount(){
 		return this.fetchKweets()
@@ -29,9 +38,10 @@ class Profile extends Component {
 
     render(){
         let {kweets} = this.state
+        let postKweet = this.postKweet
         return(
         <div>
-            <KweetInput />
+            <KweetInput postKweet={postKweet} />
             <KweetList kweets={kweets} />
         </div>
         )

@@ -7,27 +7,29 @@ class KweetInput extends Component{
         super(props)
         this.state = {
             content: '',
-            isHidden: true
+            user_id: 5
         }
-        this.onFocus = this.onFocus.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    onFocus(){
-        let { isHidden } = this.state
-        this.setState({...this.state,isHidden: !isHidden})
+    handleChange(event){
+        let target = event.target
+        let value = target.value
+        this.setState({content: value})
     }
 
     render(){
-        let hidden = this.state.isHidden
         return(
             <div className={styles.container}>
-                <div className={styles.content}>
+                <div className={styles.content} tabIndex="0">
                     <textarea
-                    onFocus={this.onFocus}
-                    onBlur={this.onFocus}
+                    
+                    onChange={this.handleChange}
                     placeholder="What's happening?"
                     />
-                    <button className={hidden?styles.hidden:''}>Kweet it</button>
+                    <button
+                    className={styles.hide}
+                    onClick={() => this.props.postKweet(this.state)}>Kweet it</button>
                 </div>
             </div>
         )
